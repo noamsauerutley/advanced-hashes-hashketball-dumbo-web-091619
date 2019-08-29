@@ -180,14 +180,24 @@ end
 def player_stats(name)
   hash = game_hash
   hash.each do |base, info|
-    info[:players].each do |player, stats|
-      if info[:players][player].include?(name)
-        
+    info.each do |player, stats|
+      if stats.include?(name)
+        return hash[base][player][name]
       end
     end
   end
 end
 
+# def shoe_size(name)
+#   hash = game_hash
+#   hash.each do |base, info|
+#     info.each do |player, stats|
+#       if stats.include?(name)
+#         return hash[base][player][name][:shoe]
+#       end
+#     end
+#   end
+# end
 def big_shoe_rebounds
 
 end
