@@ -171,9 +171,10 @@ def player_numbers(team_name)
     if info[:team_name].include?(team_name)
       info[:players].each do |player|
         numbers_array.push(player[:number])
-
+      end
     end
   end
+  numbers_array
 end
 
 def player_stats
