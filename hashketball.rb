@@ -207,14 +207,7 @@ def big_shoe_rebounds
       end
     end
   end
-  hash.each do |base, info|
-    info.each do |key, value|
-
-      if num.include?(big_shoe)
-        return player_name
-      end
-    end
-  end
+  return hash[base][value][player_name][:rebounds]
 end
 
 def most_points_scored
