@@ -202,7 +202,7 @@ def big_shoe_rebounds
   hash.each do |base, info|
     info.each do |player, stats|
       if hash[base][player][:shoe].include?(big_shoe)
-        return hash[base][player][0]
+        return hash[base][player]
       end
     end
   end
