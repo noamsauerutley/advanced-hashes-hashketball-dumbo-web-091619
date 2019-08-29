@@ -210,7 +210,7 @@ def most_points_scored
   points = 0
   hash.each do |base, info|
     hash[base][:players].each do |player, stats|
-      binding.pry
+      stats[:points]
     end
   end
 end
