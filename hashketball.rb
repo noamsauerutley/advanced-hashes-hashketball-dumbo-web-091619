@@ -199,8 +199,9 @@ def big_shoe_rebounds
           details.each do |detail, num|
             if detail = :shoe
               if num > big_shoe
-              big_shoe = num
-              big_shoe_player = player
+                big_shoe = num
+                big_shoe_player = player
+              end
             end
           end
         end
