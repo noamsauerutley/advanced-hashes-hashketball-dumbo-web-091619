@@ -168,7 +168,11 @@ def player_numbers(team_name)
   hash = game_hash
   numbers_array = []
   hash.each do |base, info|
-    
+    if info[:team_name].include?(team_name)
+      info[:players].each do |player|
+        numbers_array.push(player[:number])
+
+    end
   end
 end
 
