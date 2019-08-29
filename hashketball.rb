@@ -206,7 +206,13 @@ end
 
 
 def most_points_scored
-
+  hash = game_hash
+  points = 0
+  hash.each do |base, info|
+    hash[base][:players].each do |player, stats|
+      binding.pry
+    end
+  end
 end
 
 def winning_team
