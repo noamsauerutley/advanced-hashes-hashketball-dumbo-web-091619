@@ -188,8 +188,22 @@ def player_stats(name)
   end
 end
 
-def big_shoe_rebounds
+def shoe_size(name)
+  hash = game_hash
+  hash.each do |base, info|
+    info.each do |player, stats|
+      if stats.include?(name)
+        return hash[base][player][name][:shoe]
+      end
+    end
+  end
+end
 
+def big_shoe_rebounds
+  big_shoe = 0
+  hash = game_hash
+  hash.each do |base, info|
+    info.each do |player, stats|
 end
 
 def most_points_scored
