@@ -161,6 +161,7 @@ def team_names
   hash.each do |base, info|
     names_array.push(info[:team_name])
   end
+  names_array
 end
 
 def player_numbers
