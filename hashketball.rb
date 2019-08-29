@@ -182,7 +182,7 @@ def player_stats(name)
   hash.each do |base, info|
     info[:players].each do |player, stats|
       if info[:players][player].include?(name)
-        return
+        
       end
     end
   end
