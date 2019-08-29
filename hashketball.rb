@@ -179,6 +179,11 @@ end
 
 def player_stats(name)
   hash = game_hash
+  hash.each do |base, info|
+    if info[:player].include?(name)
+      return 
+    end
+  end
 end
 
 def big_shoe_rebounds
