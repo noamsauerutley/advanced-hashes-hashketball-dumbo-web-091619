@@ -217,8 +217,8 @@ def most_points_scored
         top_scoring_player = player
       end
     end
-    return top_scoring_player
   end
+  return top_scoring_player
 end
 
 def winning_team
