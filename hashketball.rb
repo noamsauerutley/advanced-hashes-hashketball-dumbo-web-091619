@@ -164,7 +164,9 @@ def team_names
   names_array
 end
 
-def player_numbers
+def player_numbers(team_name)
+  hash = game_hash
+  numbers_array = []
 
 end
 
