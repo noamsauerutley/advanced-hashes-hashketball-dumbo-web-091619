@@ -193,9 +193,7 @@ def big_shoe_rebounds
   big_shoe = 0
   big_shoe_player = ""
   hash.each do |base, info|
-    binding.pry
     hash[base][:players].each do |player, stats|
-      binding.pry
       if stats[:shoe] > big_shoe
         big_shoe = stats[:shoe]
         big_shoe_player = player
