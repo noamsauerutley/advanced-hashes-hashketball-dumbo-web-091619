@@ -170,7 +170,7 @@ def player_numbers(team_name)
   hash.each do |base, info|
     if info[:team_name].include?(team_name)
       info[:players].each do |player|
-        numbers_array.push(player[:number])
+        numbers_array.push(player[:number].to_i)
       end
     end
   end
