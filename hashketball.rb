@@ -183,6 +183,7 @@ def player_stats(name)
     info[:players].each do |player, stats|
     end
   end
+  return info[:players][player]
 end
 
 def big_shoe_rebounds
