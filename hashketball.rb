@@ -192,7 +192,7 @@ def big_shoe_rebounds
   hash = game_hash
   big_shoe = 0
   big_shoe_player = ""
-  hash.each do |location, info|
+  hash.each do |base, info|
     info.each do |players, stats|
       if stats.class == Hash
         stats.each do |player, details|
@@ -208,35 +208,8 @@ def big_shoe_rebounds
       end
     end
   end
-  return hash[location][players][big_shoe_player][:rebounds]
+  return hash[base][players][big_shoe_player][:rebounds]
 end
-
-
-# def big_shoe_rebounds
-#   hash = game_hash
-#   player_name = ""
-#   shoe_size = 0
-#   hash.each do |location, attributes|
-#     attributes.each do |attribute, info|
-#       if info.class == Hash
-#         info.each do |player, stats|
-#             stats.each do |stat, int|
-#               if stat == :shoe
-#                 if int > shoe_size
-#                   shoe_size = int
-#                   player_name = player
-#                 end
-#               end
-#             end
-#           end
-#         return hash[location][attribute][player_name][:rebounds]
-#       end
-#     end
-#   end
-# end
-
-
-
 
 def most_points_scored
 
