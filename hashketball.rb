@@ -225,9 +225,14 @@ def winning_team
   hash = game_hash
   home_points = 0
   away_points = 0
-    hash[:home][:players].each do |player, stats|
-      points = stats[:points]
-
+  hash[:home][:players].each do |player, stats|
+    home_points += stats[:points]
+  end
+    hash[:away][:players].each do |player, stats|
+    away_points += stats[:points]
+  end
+  winner = home_points > away_points ? home_points : away_points
+  return winner
 end
 
 def player_with_longest_name
