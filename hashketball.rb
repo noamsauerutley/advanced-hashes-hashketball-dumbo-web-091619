@@ -203,8 +203,8 @@ def big_shoe_rebounds
                 big_shoe_player = player
               end
             end
+            return hash[base][players][big_shoe_player][:rebounds]
           end
-          return hash[base][players][big_shoe_player][:rebounds]
         end
       end
     end
