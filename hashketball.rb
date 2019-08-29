@@ -197,6 +197,10 @@ def big_shoe_rebounds
       if player[:shoe] > big_shoe
         big_shoe = player[:shoe]
         big_shoe_player = player
+      end
+      return hash[base][big_shoe_player][:rebounds]
+    end
+  end
 end
 
 
