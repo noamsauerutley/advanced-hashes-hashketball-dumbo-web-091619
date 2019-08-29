@@ -207,12 +207,17 @@ end
 
 def most_points_scored
   hash = game_hash
-  points = 0
+  top_scoring_player = ""
+  most_points = 0
   hash.each do |base, info|
     hash[base][:players].each do |player, stats|
       points = stats[:points]
-      binding.pry
+      if points > most_points
+        most_points = points
+        top_scoring_player = player
+      end
     end
+    return top_scoring_player
   end
 end
 
