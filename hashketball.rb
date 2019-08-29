@@ -146,6 +146,7 @@ def team_colors(team_name)
   hash = game_hash
   hash.each do |base, info|
     if info[:team_name]include?(team_name)
+      return info[:colors]
     end
   end
 end
