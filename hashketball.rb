@@ -167,7 +167,9 @@ end
 def player_numbers(team_name)
   hash = game_hash
   numbers_array = []
-
+  hash.each do |base, info|
+    
+  end
 end
 
 def player_stats
