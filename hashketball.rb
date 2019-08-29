@@ -193,6 +193,7 @@ def big_shoe_rebounds
   big_shoe = 0
   hash.each do |base, info|
     info.each do |players, stats|
+      if stats.class = Hash
       stats.each do |player, details|
         if details[:shoe]>big_shoe
           big_shoe = details[:shoe]
