@@ -181,7 +181,7 @@ def player_stats(name)
   hash.each do |base, info|
     info.each do |player, stats|
       if stats.include?(name)
-        return player
+        return stats
       end
     end
   end
