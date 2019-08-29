@@ -168,19 +168,22 @@ def player_numbers(team_name)
   hash = game_hash
   numbers_array = []
   hash.each do |base, info|
-      info.each do |player, stats|
+    if info[:team_name].include?(team_name)
+      info[:players].each do |player, stats|
         numbers_array.push(stats[:number])
       end
     end
+  end
   numbers_array
 end
 
 def player_stats(name)
   hash = game_hash
   hash.each do |base, info|
-    info.each do |player, stats|
-      if stats.include?(name)
-        return stats
+    info[:players].each do |player, stats|
+      if info[:players][player].include?(name)
+        return
+      end
     end
   end
 end
