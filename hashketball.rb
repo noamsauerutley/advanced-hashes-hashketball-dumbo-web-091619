@@ -180,8 +180,10 @@ end
 def player_stats(name)
   hash = game_hash
   hash.each do |base, info|
-    if info[:player].include?(name)
-      return info[:player]
+    info.each do |player|
+    if info[player].include?(name)
+      return info[player]
+    end
     end
   end
 end
