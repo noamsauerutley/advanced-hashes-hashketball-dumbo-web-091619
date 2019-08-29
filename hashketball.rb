@@ -188,37 +188,47 @@ def player_stats(name)
   end
 end
 
+# def big_shoe_rebounds
+#   hash = game_hash
+#   big_shoe = 0
+#   hash.each do |base, info|
+#     info.each do |players, stats|
+#       if stats.class == Hash
+#         stats.each do |player, details|
+#         if details[:shoe]>big_shoe
+#           big_shoe = details[:shoe]
+#           big_shoe_player = player
+#         end
+#         end
+#       end
+#     end
+#   end
+#   return hash[base][players][big_shoe_player][:rebounds]
+# end
+
+
 def big_shoe_rebounds
   hash = game_hash
-  big_shoe = 0
-  hash.each do |base, info|
-    info.each do |players, stats|
-      if stats.class == Hash
-        stats.each do |player, details|
-        if details[:shoe]>big_shoe
-          big_shoe = details[:shoe]
-          big_shoe_player = player
-        end
-        end
-      end
-    end
-  end
-  return hash[base][players][big_shoe_player][:rebounds]
-end
-
-def shoe_size(name)
-  hash = game_hash
-  hash.each do |base, info|
-    info.each do |player, stats|
-      if stats.include?(name)
-        return hash[base][player][name][:shoe]
+  player_name = ""
+  shoe_size = 0
+  hash.each do |location, attributes|
+    attributes.each do |attribute, info|
+      if info.class == Hash
+        info.each do |player, stats|
+            stats.each do |stat, int|
+              if stat == :shoe
+                if int > shoe_size
+                  shoe_size = int
+                  player_name = player
+                end
+              end
+            end
+          end
+        return hash[location][attribute][player_name][:rebounds]
       end
     end
   end
 end
-
-
-
 
 
 
