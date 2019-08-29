@@ -197,8 +197,8 @@ def big_shoe_rebounds
       if stats[:shoe] > big_shoe
         big_shoe = stats[:shoe]
       end
-      return big_shoe
     end
+    return big_shoe
   end
 end
 
