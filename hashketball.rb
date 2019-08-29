@@ -192,16 +192,21 @@ def big_shoe_rebounds
   big_shoe = 0
   hash = game_hash
   hash.each do |base, info|
-    info.each do |player, stats|
-      shoe_size = hash[base][stats][:shoe]
+    info.each do |key, value|
+      if value.class == Hash
+        value.each do |player, stats|
+          stats.each do |stat, num|
+            if num == :shoe
+      shoe_size = num
       if shoe_size > big_shoe
         big_shoe = shoe_size
       end
     end
   end
   hash.each do |base, info|
-    info.each do |player, stats|
-      if hash[base][stats][:shoe].include?(big_shoe)
+    info.each do |key, value|
+
+      if num.include?(big_shoe)
         return hash[base][player]
       end
     end
