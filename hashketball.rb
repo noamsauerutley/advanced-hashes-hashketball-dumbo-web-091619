@@ -211,6 +211,7 @@ def most_points_scored
   hash.each do |base, info|
     hash[base][:players].each do |player, stats|
       points = stats[:points]
+      binding.pry
     end
   end
 end
