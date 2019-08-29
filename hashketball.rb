@@ -197,7 +197,6 @@ def big_shoe_rebounds
       if stats[:shoe] > big_shoe
         big_shoe = stats[:shoe]
         big_shoe_player = player
-        binding.pry
       end
     end
     return hash[base][:players][big_shoe_player][:rebounds]
