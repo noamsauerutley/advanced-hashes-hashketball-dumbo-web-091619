@@ -207,6 +207,10 @@ def big_shoe_rebounds
       shoe_size = hash[base][stats][:shoe]
       if shoe_size > big_shoe
         big_shoe = shoe_size
+      end
+    end
+  end
+  if hash[base][stats][:shoe].include?(big_shoe)
 end
 
 def most_points_scored
