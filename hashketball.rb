@@ -197,9 +197,13 @@ def big_shoe_rebounds
         value.each do |player, stats|
           stats.each do |stat, num|
             if num == :shoe
-      shoe_size = num
-      if shoe_size > big_shoe
-        big_shoe = shoe_size
+              if num > big_shoe
+                big_shoe = num
+                player_name = player
+              end
+            end
+          end
+        end
       end
     end
   end
@@ -207,7 +211,7 @@ def big_shoe_rebounds
     info.each do |key, value|
 
       if num.include?(big_shoe)
-        return hash[base][player]
+        return player_name
       end
     end
   end
