@@ -199,7 +199,7 @@ def big_shoe_rebounds
         big_shoe_player = player
       end
     end
-    return player
+    return big_shoe_player
   end
 end
 
