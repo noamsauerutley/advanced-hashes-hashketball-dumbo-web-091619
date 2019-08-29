@@ -192,7 +192,7 @@ def big_shoe_rebounds
   hash = game_hash
   big_shoe = 0
   big_shoe_player = ""
-  hash.each do |base, info|
+  hash.each do |location, info|
     info.each do |players, stats|
       if stats.class == Hash
         stats.each do |player, details|
@@ -208,7 +208,7 @@ def big_shoe_rebounds
       end
     end
   end
-  return hash[base][players][big_shoe_player][:rebounds]
+  return hash[location][players][big_shoe_player][:rebounds]
 end
 
 
