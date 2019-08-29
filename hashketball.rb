@@ -182,7 +182,6 @@ def player_stats(name)
     info.each do |player, stats|
       if stats.include?(name)
         return stats
-      end
     end
   end
 end
