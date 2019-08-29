@@ -231,7 +231,7 @@ def winning_team
     hash[:away][:players].each do |player, stats|
     away_points += stats[:points]
   end
-  winner = home_points > away_points ? home_points : away_points
+  winner = home_points > away_points ? hash[:home][:team_name] : hash[:away][:team_name]
   return winner
 end
 
