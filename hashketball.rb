@@ -237,15 +237,17 @@ end
 
 def player_with_longest_name
   longest_length = 0
+  longest_name = ""
   hash = game_hash
   hash.each do |base, info|
     info.each do |player, stats|
       if hash[base][player].length > longest_length
-        longest_length = hash[base][player].length
-        binding.pry
+        longest_length = player.length
+        longest_name = player
       end
     end
   end
+  return longest_name
 end
 
 def long_name_steals_a_ton
