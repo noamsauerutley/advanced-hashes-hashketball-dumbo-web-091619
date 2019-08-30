@@ -260,7 +260,7 @@ def long_name_steals_a_ton?
       if points > most_points
         most_points = points
       end
-most_points
+      most_points
     end
   end
 end
