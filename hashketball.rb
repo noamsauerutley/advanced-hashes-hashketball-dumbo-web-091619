@@ -260,7 +260,7 @@ def long_name_steals_a_ton?
       if points > most_points
         most_points = points
       end
+      binding.pry
     end
   end
-return points
 end
