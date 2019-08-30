@@ -257,7 +257,10 @@ def long_name_steals_a_ton?
   hash = game_hash
   hash.each do |base, info|
     hash[base][:players].each do |name, stats|
-
+      if stats[:steals] > most_steals
+        most_steals = stats[:steals]
+        steals_a_ton = name
+      end
     end
   end
 end
